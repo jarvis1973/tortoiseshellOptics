@@ -45,15 +45,19 @@ body {
   }
 
   #nav {
-    display: inline-flex;
-      }
+    float: right;
+  }
 
     ul {
-      display: inline-block;
+      vertical-align: middle;
     }
 
-   ul #menu {
+   #menu {
     display: none;
+  }
+
+  li {
+    display: inline-flex;
   }
 
   a {
