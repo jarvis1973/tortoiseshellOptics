@@ -1,63 +1,68 @@
 /* Gobal Attributes */
-html {
-  font-size: 18px;
-}
+  html {
+    font-size: 18px;
+    font:helvetica;
+    background-color: white;
+  }
 
-/* The Body Section */
-body {
-  font:helvetica;
-}
+  /* The Body Section */
+  body {
+    line-height: 1.4rem;
+  }
 
-.container {
-  line-height: 1.4;
-}
+  .container {
+    max-width: 960px;
+    margin: auto;
+  }
+
+  .flex {
+   display: flex;
+ }
 
 /* The Header Section */
-  #top {
+  header {
     height: 31rem;
+    padding-top: 1rem;
     background-image: url("../../resources/images/glasses-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  header {
-    padding: 1rem 2rem;
-    padding-top: 1rem;
-    width: 960px;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .67em o;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem 0;
     background-color: cadetblue;
     font-size: 1rem;
     color: white;
   }
 
-  #logo {
+  nav div {
     display: flex;
     align-items: center;
-    font-size: 1rem;
   }
 
-  img {
+  nav img {
     height: 1.5rem;
-    padding-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+   }
+
+  ul {
+    margin-right: 1rem;
   }
 
-  #nav {
-    float: right;
-  }
-
-    ul {
-      vertical-align: middle;
-    }
-
-   #menu {
-    display: none;
-  }
-
-  li {
-    display: inline-flex;
+  ul li {
+    display: inline;
+    padding: 0 1rem;
   }
 
   a {
@@ -65,21 +70,171 @@ body {
     color: white;
   }
 
-  #see {
-    margin-top: 5rem;
-    max-width: 35%;
-    padding: 1.5rem 5rem;
+  .truncated-menu {
+   display: none;
+ }
+
+  header .flex {
+    justify-content: flex-end;
+  }
+
+  .main-banner {
     background-color: white;
+    display: inline-block;
+    padding: 0.75rem 5rem;
+    margin-top: 10rem;
+    margin-right: -2rem;
+    line-height: 2.4rem;
   }
 
-  #see span {
+  @media only screen and (max-width: 1024px) {
+    header {
+      padding-top: 0;
+      height: 22rem;
+    }
+
+    nav.container {
+      max-width: 100%;
+    }
+
+    .main-banner {
+      padding: 0.75rem 4rem;
+      margin-top: 5rem;
+      margin-right: 2rem;
+    }
+
+    .main-banner h1 {
+      font-size: 1.33rem;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .menu ul {
+      display: none;
+    }
+
+    .menu ul.truncated-menu {
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 560px) {
+    header div span {
+      display: none;
+    }
+
+    header {
+      background-position: 20%;
+      height: 17rem;
+    }
+
+    .main-banner {
+      padding: 0 1rem;
+      margin: 9rem auto 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    .main-banner h1 {
+      font-size: 1rem;
+    }
+  }
+
+  /* The Main Section */
+  .supporting {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 560px) {
+  .supporting {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3rem;
+  }
+}
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 3rem;
+    width: 5rem;
+    height: 8rem;
+  }
+
+  .service img.paper-icon {
+      width: 3.5rem;
+      margin-bottom: 1rem;
+  }
+
+  @media only screen and (max-width: 560px) {
+  .service {
+    height: auto;
+    margin: .77rem;
+    font-size: .77rem;
+  }
+}
+
+  .info {
+    width: 35%;
+    margin-right: 5%;
+    margin-bottom: 4rem;
+  }
+
+  .info p {
+    padding: 1rem 0;
+  }
+
+  .title {
+    background: cadetblue;
+    padding: 0.5rem 1.25rem;
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 1.2;
+    color: white;
+    max-width: 10rem;
   }
 
+  @media only screen and (max-width: 560px) {
+  .info {
+    width: auto;
+  }
 
-/* The Main Section */
+  .info .title {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .info p {
+    padding: 1rem;
+    font-size: .77rem;
+  }
 
 
 /* The Footer Section */
+
+footer {
+  background-color: azure;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 560px) {
+  footer {
+    justify-content: center;
+  }
+
+  footer div {
+    display: none;
+  }
+}
